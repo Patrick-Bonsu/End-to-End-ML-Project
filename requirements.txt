@@ -1,0 +1,6 @@
+pandas
+joblib
+scikit-learn
+flask
+flask_uploads
+-e .

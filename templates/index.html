@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Titanic Prediction App</title>
+</head>
+<body>
+    <h1>Titanic Survival Prediction</h1>
+
+    <form method="POST" action="/">
+        <label for="Pclass">Pclass:</label>
+        <input type="number" name="Pclass" required>
+        <br>
+
+        <label for="Age">Age:</label>
+        <input type="number" name="Age" step="0.01" required>
+        <br>
+
+        <label for="SibSp">SibSp:</label>
+        <input type="number" name="SibSp" required>
+        <br>
+
+        <label for="Parch">Parch:</label>
+        <input type="number" name="Parch" required>
+        <br>
+
+        <label for="Fare">Fare:</label>
+        <input type="number" name="Fare" step="0.01" required>
+        <br>
+
+        <label for="Sex">Sex:</label>
+        <select name="Sex" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <br>
+
+        <label for="Embarked">Embarked:</label>
+        <select name="Embarked" required>
+            <option value="C">C</option>
+            <option value="Q">Q</option>
+            <option value="S">S</option>
+        </select>
+        <br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    <!-- Display predictions if available -->
+    {% if predictions %}
+        <h2>Predictions:</h2>
+        <ul>
+            {% for prediction in predictions %}
+                <li>{{ prediction }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
