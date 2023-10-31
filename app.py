@@ -4,6 +4,7 @@ import os
 import pandas as pd
 from joblib import load
 
+
 app = Flask(__name__)
 
 # Define the path for the preprocessor
