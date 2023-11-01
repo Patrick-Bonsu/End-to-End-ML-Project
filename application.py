@@ -5,7 +5,7 @@ import pandas as pd
 from joblib import load
 
 application = Flask(__name__)
-app =application
+app = application
 # Define the path for the preprocessor
 preprocessor_path = r"C:\Users\TRY'S COMPUTERS\Desktop\Titanic\src\artifacts\preprocessor.pkl"  # Update with the actual path
 model_path=r"C:\Users\TRY'S COMPUTERS\Desktop\Titanic\src\artifacts\best_model.joblib"
@@ -47,4 +47,4 @@ def index():
     return render_template('index.html', predictions=predictions)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0")
